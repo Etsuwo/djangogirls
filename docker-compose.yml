@@ -1,0 +1,9 @@
+version: '3'
+services:
+  django:
+    build: ./
+    volumes:
+      - .:/djangogirls
+    ports:
+      - "50030:8000"
+    command: python /djangogirls/mysite/manage.py runserver 0:8000
